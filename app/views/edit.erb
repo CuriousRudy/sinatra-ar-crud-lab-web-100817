@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Update a Blog Post</title>
+  </head>
+  <body>
+    <form class="new_post" action="/posts/<%=@post.id%>" method="post">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <label for="name">Post Name: </label>
+      <input type="text" name="name" value="<%= @post.name%>"><br>
+      <label for="content">Your Post: </label>
+      <input type="text" name="content" value="<%= @post.content%>"><br>
+      <input id="submit" type="submit" value="Update Post">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Blog</title>
+  </head>
+  <body>
+
+    <a href="/posts/new">Write a new post!</a>
+
+    <% Post.all.each do |post| %>
+    <h2><%= post.name %> </h2>
+    <p><%= post.content %></p>
+    <%end%>
+
+  </body>
+</html>
